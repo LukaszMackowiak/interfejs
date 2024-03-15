@@ -20,39 +20,63 @@ button2.addEventListener('click', evt){
  const userAgeVal = wiek.Value;
  const szukanaVal = szukana.Value;
  const kryteriumVal = kryterium.Value;
-
- let uzytkownicy = [
-     {
-         userID: 4353465342,
-         userName: Stefan,
-         userCity: Sosnowiec,
-         userAge: 50,
-     },
-     {
-        userID: 6846574635,
-        userName: Bronisława,
-        userCity: Warszawa,
-        userAge: 74,
-     },
-     {
-        userID: 7654432677,
-        userName: Jan,
-        userCity: Gliwice,
-        userAge: 28,
-     },
-     {
-        userID: 7648765487,
-        userName: Ignacy,
-        userCity: Łódź,
-        userAge: 56,
-     },
-     {
-        userID: 3255676655,
-        userName: Stefan,
-        userCity: Bydgoszcz,
-        userAge: 26,
-     },
- ]
+ 
+ let usersArr = [
+	{
+		userID: '36b8f84d-df4e-ad32-b662-bcde71a8764f',
+		userName: 'Jasia',
+		userCity: 'Gliwice',
+		userAge: 16,	
+	},
+	{
+		userID: '36b8f84d-df4e-4d49-b662-bcde71a87623',
+		userName: 'Michał',
+		userCity: 'Zabrze',
+		userAge: 19,
+	},
+	{
+		userID: '36b8f84d-df4e-s3ae-b662-bcde71a876aa',
+		userName: 'Olga',
+		userCity: 'Knurów',
+		userAge: 23,
+	},
+	{
+		userID: '36b8f84d-df4e-a43w-b662-bcde71a876b3',
+		userName: 'Marek',
+		userCity: 'Gliwice',
+		userAge: 17,
+	},
+	{
+		userID: '36b8f84d-df4e-zfdr-b662-bcde71a876a2',
+		userName: 'Józefa',
+		userCity: 'Pyskowice',
+		userAge: 42,
+	},
+	{
+		userID: '36b8f84d-df4e-adz3-b662-bcde71a87622',
+		userName: 'Janek',
+		userCity: 'Gliwice',
+		userAge: 30,
+	},
+	{
+		userID: '36b8f84d-df4e-bfr3-b662-bcde71a87635',
+		userName: 'Hania',
+		userCity: 'Toszek',
+		userAge: 12,
+	},
+	{
+		userID: '36b8f84d-df4e-n2er-b662-bcde71a87644',
+		userName: 'Benek',
+		userCity: 'Warszawa',
+		userAge: 45,
+	},
+	{
+		userID: '36b8f84d-df4e-ke4q-b662-bcde71a876fa',
+		userName: 'Gosia',
+		userCity: 'Gliwice',
+		userAge: 30,
+	},
+];
 
 
 [].forEach(element => {
