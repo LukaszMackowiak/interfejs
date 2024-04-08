@@ -83,3 +83,41 @@ button2.addEventListener('click', evt){
     ${element.name}
     ${element.button}
 })
+
+
+function removeUser(removeUserID){
+	userArr = userArr.filter((user) => user.userID !== removeUserID);
+
+	displayUsers();
+}
+
+displayUsers();
+
+function generateSearchOption(){
+	const userObject = userArr[0];
+	for (const userObjProperty of Object.keys(userObject)){
+		if (userObjProperty !== 'userID'){
+			const option = document.createElement('option');
+			option.value = userObjProperty;
+			option.innerText = userObjProperty;
+			selectSearchBy.append(option);
+		}
+
+	}
+}
+generateSearchOption();
+
+
+searchBtn.addEventListener('click', function (evt) {
+	evt.preventDefault();
+	foundUsersList.innerHTML = '';
+	console.log(searchValue.value);
+	userArr
+		.filter((elem) => elem[selectSearchBy.value] == searchValue.value)
+		.map((elem) => {
+			const li = document.createElement('li');
+			li.classList.add('list-group-item');
+			li.innerHTML = `$(elem.userName) $(elem.userCity) $(elem.userAge)`;
+			foundUsersList.append(li);   
+		})
+})
